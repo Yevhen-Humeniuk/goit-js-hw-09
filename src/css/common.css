@@ -16,3 +16,73 @@ img {
   display: block;
   max-width: 100%;
 }
+
+button {
+  display: flex;
+  padding: 10px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor:default;
+}
+
+.datetime-picker {
+  padding: 10px;
+  font-weight: 700;
+  border: none;
+  color:darkgoldenrod;
+  background-color:lightgoldenrodyellow;
+}
+
+.datetime-picker:disabled {
+  color: darkkhaki;
+  background-color:rgb(240, 240, 150);
+  cursor: default;
+}
+
+.timer {
+  margin-top: 0.5em;
+  display: flex;
+  column-gap: 10px;
+}
+
+.timer .field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer .value {
+  font-size: 2em;
+  font-weight: 700;
+  color: grey;
+}
+
+.timer .label {
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 50%
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+}
+
+.form input {
+  position: relative;
+  height: 2.5em;
+  margin-left: auto;
+  width: 50%;
+}

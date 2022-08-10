@@ -58,11 +58,9 @@ function onChooseDate(selectedDate) {
         refs.dtPicker.removeAttribute("disabled");
         return;
     }
-    // осталось времени по категориям
+
     const leftTimeObj = convertMs(selectedDate - toDay);
 
-    // Перебор ключей объекта ссылок
-    // updateTimerValue(refs.leftTime, leftTimeObj);
     
     const updateTimerValue = dtProp => {
         refs.leftTime[dtProp].textContent = addLeadingZero(leftTimeObj[dtProp]);
@@ -72,28 +70,18 @@ function onChooseDate(selectedDate) {
 
 };
 
-
-// function updateTimerValue({ days, hours, minutes, seconds }, leftTime) {
-//     days.textContent = addLeadingZero(leftTime.days);
-//     hours.textContent = addLeadingZero(leftTime.hours);
-//     minutes.textContent = addLeadingZero(leftTime.minutes);
-//     seconds.textContent = addLeadingZero(leftTime.seconds);
-// };
-
 function convertMs(ms) {
-  // Number of milliseconds per unit of time
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
 
-  // Remaining days
   const days = Math.floor(ms / day);
-  // Remaining hours
+
   const hours = Math.floor((ms % day) / hour);
-  // Remaining minutes
+
   const minutes = Math.floor(((ms % day) % hour) / minute);
-  // Remaining seconds
+
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
   return { days, hours, minutes, seconds };
