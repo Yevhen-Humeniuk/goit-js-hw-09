@@ -18,7 +18,6 @@ img {
 }
 
 button {
-  display: flex;
   padding: 10px;
   background-color: lightgray;
   border: none;
